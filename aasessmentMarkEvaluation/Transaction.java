@@ -27,7 +27,7 @@ public class Transaction{
 	}
 	
 	
-	//toString method overriden to return the details of a transaction when called with the object
+	//toString method overridden to return the details of a transaction when called with the object
 	  @Override
 	    public String toString()
 		{
@@ -49,7 +49,7 @@ public class Transaction{
 		 System.out.println("Enter the transaction number");
 		 transaction_number = scanner.nextInt();
 		 scanner.nextLine();
-		 System.out.println("Enter the type of transfer...Cash/Transfer?");
+		 System.out.println("Enter the type of transfer...Cash/Online?");
 		 type = scanner.next();
 		 System.out.println("Enter the amount ");
 		 amount=scanner.nextDouble();
@@ -76,20 +76,20 @@ public class Transaction{
 			 System.out.println("Amount credited to "+to.replaceAll("\\d(?=\\d{2})", "*"));
 			 System.out.println("The remaining balance is "+toAcc.getBalance());
 		 }
-		 status = "complete";
+		 status = "completed";
 		 System.out.println("Transaction completed successfully");
 		 
 		}
-		Transaction tObj = new Transaction();
-		 tObj.setFromAccount(fromAcc);
-		 tObj.setTransaction_number(transaction_number);
-		 tObj.setAmount(amount);
-		 tObj.setToAccount(toAcc);
-		 tObj.setStatus(status);
-		 tObj.setType(type);
+		Transaction tObject = new Transaction();
+		 tObject.setFromAccount(fromAcc);
+		 tObject.setTransaction_number(transaction_number);
+		 tObject.setAmount(amount);
+		 tObject.setToAccount(toAcc);
+		 tObject.setStatus(status);
+		 tObject.setType(type);
 		 if(bObj!=null)
-		 bObj.populateAccounts(tObj);
-		 System.out.println("Do u want to do another transaction...yes/no??");
+		 bObj.populateAccounts(tObject);
+		 System.out.println("Do you want to do another transaction...yes/no??");
 			userChoice = scanner.next();
 		 }while(userChoice.equalsIgnoreCase("yes"));
 	 }

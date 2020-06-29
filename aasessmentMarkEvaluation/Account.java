@@ -1,6 +1,5 @@
 package aasessmentMarkEvaluation;
 
-
 import java.io.Console;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -74,7 +73,7 @@ public class Account{
 					"\nBalance :"+balance;
 		}
 
-	  //equals method overriden to check if account number of the two objects match
+	  //equals method overridden to check if account number of the two objects match
 	  @Override
 	    public boolean equals(Object obj) {
 		Account d2 = (Account)obj;

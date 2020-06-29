@@ -20,19 +20,19 @@ public class Bank {
 	public void setTransactionList(ArrayList<Transaction> transactionList) {
 		this.transactionList = transactionList;
 	}
-	void addAccounts(Account aObj, Transaction tObj) {
+	void addAccounts(Account aObject, Transaction tObject) {
 		
-		aObj.takeAccountDetailsFromUser(tObj);
-		setAccountList(tObj.getAccountList());
+		aObject.takeAccountDetailsFromUser(tObject);
+		setAccountList(tObject.getAccountList());
 		System.out.println("Accounts added successfully");
 	}
-	void doTransaction(Transaction tObj, Bank bObj)
+	void doTransaction(Transaction tObject, Bank bObject)
 	{
-		tObj.transact(bObj);
+		tObject.transact(bObject);
 		System.out.println("Transaction completed successfully");
 	}
-	void populateAccounts(Transaction tObj){
-		transactionList.add(tObj);
+	void populateAccounts(Transaction tObject){
+		transactionList.add(tObject);
 	}
 	void printAccounts() {
 		for(Account acc:accountList) {
@@ -46,14 +46,14 @@ public class Bank {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Bank bObj = new Bank();
+		
+		Bank bObject = new Bank();
 		Account aObj = new Account();
 		Transaction tObj = new Transaction();
-		bObj.addAccounts(aObj, tObj);
-		bObj.doTransaction(tObj, bObj);
-		bObj.printAccounts();
-		bObj.printTransactions(); 
+		bObject.addAccounts(aObj, tObj);
+		bObject.doTransaction(tObj, bObject);
+		bObject.printAccounts();
+		bObject.printTransactions(); 
 	}
 
 }
